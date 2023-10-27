@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Express To-Do</title>
-</head>
-<body>
-    <a href="/">Home</a>
-    <h1>All To-Dos</h1>
+<%- include('../partials/header') %>
     <ul>
       <% todos.forEach(function(t) { %>
         <li>
@@ -18,5 +8,4 @@
         </li>
       <% }); %>
     </ul>
-  </body>
-</html>
+<%- include('../partials/footer') %>

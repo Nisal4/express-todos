@@ -8,13 +8,13 @@ module.exports = {
 function index(req, res) {
     res.render('todos/index', {
         todos: Todo.getAll(),
-        title: 'To-Do Details'
+        title: 'All To-Dos'
     });
 }
 
 function show(req, res) {
     res.render('todos/show', {
         todo: Todo.getOne(req.params.id),
-        title: 'All To-Dos' 
+        title: 'To-Do Details' 
     });
 }
