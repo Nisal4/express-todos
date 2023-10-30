@@ -6,7 +6,16 @@ const todos = [
 	
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create
+};
+
+function create(todo) {
+  // Add the id
+  todo.id = Date.now() % 1000000;
+  // New todos wont be done
+  todo.done = false;
+  todos.push(todo);
 };
 
 function getOne(id) {
