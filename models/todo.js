@@ -7,8 +7,17 @@ const todos = [
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne
 };
+
+function deleteOne(id) {
+  // All properties attached to req.params are strings
+  id = parseInt(id);
+  // Find the index based on the id of the todo object
+  const idx = todos.findIndex(todo => todo.id === id);
+  todos.splice(idx, 1);
+}
 
 function create(todo) {
   // Add the id
